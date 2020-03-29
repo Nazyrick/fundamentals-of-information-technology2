@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Лабораторная №2
+        </title>
+        <style>
+            .tabl{
+border-color: black;
+border-radius: 5px;
+text-align: center;
+}
+.tabl1{
+border-color: black;
+border-radius: 5px;
+text-align: center;
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <table class="tabl" border = "1px"> 
+            <script language="JavaScript"> 
+            document.write("<h1 align=center>" + "Задание№1" + "</h1>");
+            document.write("<tr><td bgcolor='#918E8A' >X</td>"); 
+            for (i = 1; i <= 10; i++) document.write("<td bgcolor='#918E8A'>"+ i +" </td>"); 
+            document.write("</tr>"); 
+            for (i = 1; i <= 10; i++) 
+            { 
+            document.write("<tr><td bgcolor='#918E8A'>" + i + " </td>"); 
+            for (j = 1; j <= 10; j++) 
+            { 
+            document.write("<td style='text-align:center;'>" + (i * j) + " </td>");} 
+            document.write("</tr>"); 
+            } 
+    
+            </script> 
+            </table>
+            <table class="tabl" border = "1px">
+                <script type="text/javascript">
+                 document.write("<h1 align=center>" + "Задание№2" + "</h1>");
+                 document.write("<tr><td bgcolor='#009500' >  Радиус  </td>"); 
+                    document.write("<td bgcolor='#009500' > Площадь круга </td>"); 
+                        document.write("<td bgcolor='#009500' >  Длина окружности </td>"); 
+                            document.write("</tr>"); 
+                            a = new Number(0);
+                          
+                 do{
+                    document.write("<tr><td bgcolor='#009500'>"+ a +" </td>"); 
+                    document.write("<td bgcolor='#009500'>"+ a * 3.14 * a +" </td>");
+                    document.write("<td bgcolor='#009500'>"+ 2 * 3.14 * a +" </td>");
+                     a+=0.3;
+                     a.toFixed(1);
+
+                 }
+while(a<=5);
+
+
+                </script>
+            </table> 
+            <table class="tabl1" border = "3px">
+                <script type="text/javascript">
+                document.write("<h1 align=center>" + "Задание№3" + "</h1>");
+                document.write("<tr><td bgcolor='#FA8072'>Число</td>");
+                    document.write("<td bgcolor='#FA8072'>Метод</td>");
+                        document.write("<td bgcolor='#FA8072'>Результат</td>");
+                            document.write("<td bgcolor='#FA8072'>Описание метода</td></tr>");
+                            x = new Number(10.134);
+                            document.write("<tr><td>" + x + "</td>");
+                            document.write("<td>toExponential</td>");
+                            x=x.toExponential(2);
+                            document.write("<td>" + x + "</td>");
+                            document.write("<td>Представляет число в экспоненциальной форме</td></tr>");
+                            x = new Number(10.134);
+                            document.write("<tr><td>" + x + "</td>");
+                                document.write("<td>toFixed</td>");
+                                x=x.toFixed(6); 
+                                document.write("<td>" + x + "</td>");
+                                document.write("<td>Представляет число в форме с фиксированным количеством цифр после точки</td></tr>");
+                                x = new Number(10.134);
+                            document.write("<tr><td>" + x + "</td>");
+                                document.write("<td>toPrecision</td>");
+                                x=x.toPrecision(4);
+                            document.write("<td>" + x + "</td>");
+                            document.write("<td>Представляет число с заданным общим количеством значащих цифр</td></tr>");
+                            x = new Number(10.134);
+                            document.write("<tr><td>" + x + "</td>");
+                            document.write("<td>toString</td>");
+                            x=x.toString(5); 
+                                document.write("<td>" + x + "</td>");
+                                document.write("<td>Возвращает строковое представление числа в системе счисления с указанным основанием</td></tr>");
+                </script>
+            </table>
+    </body>
+</html>
