@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Лабораторная работа №6
+        </title>
+    </head>
+    <style>
+        .first{
+            text-align: left;
+        }
+    </style>
+    <body>
+<input type="button" value="Open new window" onclick="newwindow()">
+<input type="button" value="Close window" onclick="delitewindow()">
+<input type="button" value="Print something in window" onclick="printwindow()">
+<script>
+    a = new Array();
+    b = 0;
+function newwindow(){
+   a[b] = window.open("", b);
+   b++;
+}
+function delitewindow(){
+    var c = prompt("Введите номер окна, которое хотите удалить : " );
+    a[c].close();
+}
+function printwindow(){
+               v = prompt();
+                a[v].document.write('Это текст<br>');
+                a[v].document.write('Имя данного окна: ' + a[v].name );}
+
+
+
+</script>
+<table border="2px solid black" class="first">
+<script type="text/javascript">
+
+document.write("<tr><td>" + "Свойство" + "</td><td>" + "Значение" + "</td>");
+            document.write("<tr><td>Имя браузера</td><td>" + navigator.appVersion + "</td></tr>") ;
+            document.write("<tr><td>Название браузера</td><td>" + window.navigator.appName + "</td></tr>") ;
+            document.write("<tr><td>Кодовое название браузера</td><td>" + navigator.appCodeName + "</td></tr>") ;
+            document.write("<tr><td>OC</td><td>" + navigator.platform + "</td></tr>") ;
+            document.write("<tr><td>Поддержка Java</td><td>" + navigator.javaEnabled() +  "</td></tr>") ;
+            document.write("<tr><td>Ширина экрана</td><td>" + screen.width + "</td></tr>") ;
+            document.write("<tr><td>Высота экрана</td><td>" + screen.height + "</td></tr>") ;
+            document.write("<tr><td>Глубина цвета</td><td>" + screen.colorDepth + "</td></tr>") ;
+            document.write("<tr><td>Количество посещённых страниц</td><td>" + History.length + "</td></tr>") ;
+            document.write("<tr><td>URL</td><td>" + window.location.href + "</td></tr>") ;
+            document.write("<tr><td>Путь к загруженному документу</td><td>" +  window.location.pathname+ "</td></tr>") ;
+            document.write("<tr><td>Имя домена</td><td>" +  window.location.host + "</td></tr>") ;
+
+            
+</script>
+</table>
+    </body>
+</html>
