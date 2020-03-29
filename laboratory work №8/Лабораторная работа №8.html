@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Лабораторная работа №8
+        </title>
+    </head>
+    <style>
+        .first{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+             font-size: large;
+             font-weight: bold;
+        }
+    </style>
+
+    <body>
+        <p id="first" class="first">
+            Наведи мышь и текст поменяет свой цвет на новый!</p>  
+        
+        <p id="second">Нажми на этот текст и он увеличится!</p> 
+
+<div id="three">
+    <img src="Dq25fysWoAAgfZT (1).jpg" id="third" onclick="three()" height="350px" width="400px">
+</div>
+
+<div id="four" onclick="four()" class="first">НУЖЕН XANAX</div>
+
+<div ><img src="maxresdefault (1).jpg"  id="fifth" height="200px" width="200px"></div>
+
+<div id="six">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur voluptatem excepturi placeat obcaecati? Cupiditate eligendi placeat accusamus? Eos, voluptate eligendi. Nam soluta possimus placeat deserunt dolorem fuga, impedit facilis.</div>
+       
+       
+       
+       <script type="text/javascript">
+        var one = document.getElementById("first");
+        one.onmouseover = function () {
+            this.style.color = "HotPink";
+        } 
+        one.onmouseout = function(){
+           this.style.color = "";
+        }
+        var two = document.getElementById("second");
+        two.onclick = function(){
+            this.style.fontSize = "350%";
+        }
+        two.oncontextmenu = function() {
+            this.style.fontSize = "100%";
+            return false;
+        }
+        var three = document.getElementById("third");
+        three.onclick = function(){
+            three.src = "maxresdefault.jpg";
+        this.style.width = "550px";
+        this.style.height = "350px";
+        }
+        three.oncontextmenu = function() {
+            three.src = "Dq25fysWoAAgfZT (1).jpg";
+        this.style.width = "550px";
+        this.style.height = "350px";
+            return false;}
+            function four () {
+        var four = document.getElementById("four");
+        four.innerHTML = "<img id='four' src='C51yavBWYAA4hXl.jpg' width= '500px' height = '350px'>";
+     
+    }
+    var five = document.getElementById("fifth");
+    five.onmouseover = function () {
+        five.style.width = "400px";
+        five.style.height = "400px";
+    }
+    five.onmouseout = function () {
+        five.style.width = "200px";
+        five.style.height = "200px";
+    }
+    var last = document.getElementById ("six");
+last.ondblclick = function () {
+last.style.border = "3px solid red";
+}
+last.oncontextmenu = function(){
+    last.style.border = "0px";
+    return false;
+}
+    </script>
+       
+       
+  
+    </body>
+</html>
