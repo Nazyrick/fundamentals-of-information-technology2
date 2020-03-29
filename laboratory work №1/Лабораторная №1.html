@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            Лабораторная работа №1
+        </title>
+        <style>
+        .fir{
+            color:(240, 230, 140); font-family:Garamond; text-align: center; 
+        }
+        .sec{
+            background-image: url(fuchsia-metal-grid-2.png);
+        }
+        .third{
+background-color: white; width: 110px;
+        }
+        .four{
+            text-transform: capitalize;
+            font-size: large;
+            background-color: yellow;
+        }
+        .five{
+            display: flex;
+            flex-flow: row wrap-reverse;
+            margin-left: 200px;
+        }
+        
+        </style>
+        <script type="text/javascript">
+             function first(){
+                var person;
+        alert("Вас приветствует учебный центр!")
+           person = prompt("Введите ваше имя")
+           alert("Добро пожаловать на наши курсы, " + person)
+          if(confirm("Хотите стать Web-дизайнером?"))
+            alert("Учите стили CSS и JavaScript!")
+        else(alert("Упускайте время!!!"))
+             }
+             function second(){
+                var a = 5;
+        var b = 10;
+        var result;
+        result = a + b;
+        document.write("<body style='color:red ; font-size: large; font-family: Times New Roman; background-color: black';>" +"Результат сложения двух чисел : " + a + " + " + b + " = "+ result);
+        document.write("</br>");
+        document.write("</br>");
+        var a = '5';
+        var b = '10';
+        var result;
+        result = a + b;
+        document.write( "Результат сложения двух строк : " +a + " + " + b + " = "+ result);
+        document.write("</br>");
+        document.write("</br>");
+        var x = 22;
+        var y = '5';
+        var RESULTT;
+        RESULTT = x + y;
+        document.write("Результат сложения числа и строки : " + RESULTT);
+        document.write("</br>");
+        document.write("</br>");
+        var t = '22';
+        var u = 5;
+        var RESULTTT;
+        RESULTTT = t + u;
+        document.write("Результат сложения строки и числа : " + RESULTTT);
+        alert("Результатом сложения строки и числа всегда будет строка!")
+             }
+             function third(){
+                var x=5;
+        var y=50;
+        var result;
+        var Result;
+        var resulT;
+        result = (35*y-25*x)/5+232;
+        Result = (8*y/x+5*x/y-43)*6;
+        resulT = (result % Result);
+        document.write("<body style = 'color:green ; font-size: large; font-family: Century Gothic; background-color: LightCoral';>" + "(" + 35 + "*" + y + "-" + 25 + "*" + x + ")" + "/" + 5 + "+" + 232 + "=" + result);
+        document.write("</br>");
+        document.write("Результат 1 арифметического выражения = " + result);
+        document.write("</br>");
+        document.write("</br>");
+        document.write("(" + 8 + "*" + y + "/" + x + "+" + 5 + "*" + x + "/" + y + "-" + 43 + ")" + "*" + 6+ "=" + Result);
+        document.write("</br>");
+        document.write("Результат 2 арифметического выражения = " + Result);
+        document.write("</br>");
+        document.write("</br>");
+document.write(result + "%" + Result + "=" + resulT);
+document.write("</br>");
+document.write("Результат остатка от деления = " + resulT);
+alert("Результат 1 арифметического выражения = " + result);
+alert("Результат 2 арифметического выражения = " + Result);
+alert("Результат остатка от деления = " + resulT);
+             }
+             function fourth(){
+                var x ;
+                x = prompt('Введите число');
+               if((x < 20 || x > 40) && x!=5 && x%5==0){
+                   document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>"  + "Правильное значение!");
+               }
+               else{ 
+                document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Не правильное значение!" );
+               }
+document.write("</br>");
+        var y;
+        y = prompt('Введите оценку, которую хотите получить')
+        if (y>0 && y<11){
+            document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Удачи!");
+        }
+        else {
+            document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Такой оценки не существует!");
+        }
+             }
+             function fifth(){
+                var x;
+        var y;
+        x = prompt('Введите первое число',"");
+        y = prompt('Введите второе число',"");
+        if(x>y){
+            document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Первое число больше второго!" + "</br>")
+        }
+        else if(x<y){
+            document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Второе число больше первого!" + "</br>")
+        }
+        else{
+            document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Первое число равно второму числу!" + "</br>")
+        }
+        var j;
+        var h;
+        j = prompt('Введите первую дату',"");
+        h = prompt('Введите вторую дату',"");
+        (j>h) ? document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Первая дата больше второй!") : (j<h) ? document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Вторая дата больше первой!") : document.write("<body style = 'color:MediumVioletRed ; font-size: large; font-family:  Monotype Corsiva; background-color: Orange; text-align: center';>" + "Первая дата равна второй!")
+             }
+             function sixth(){
+        var x;
+      x = prompt('Введите номер дня недели',"");
+    
+     
+      switch (x)
+{
+case "1" : alert("Понедельник"); break;
+case "2" : alert("Вторник"); break;
+case "3" : alert("Среда"); break;
+case "4" : alert("Четверг"); break;
+case "5" : alert("Пятница"); break;
+case "6" : alert("Суббота"); break;
+case "7" : alert("Воскресенье"); break;
+default:x ="Неверные данные";
+}
+     }
+     function seventh(){
+        try {
+
+alert('Начало блока try');  
+
+
+
+alert('Конец блока try (никогда не выполнится)');  
+
+} catch(err) {
+
+alert(`Возникла ошибка!`); 
+
+}
+     }
+        </script>
+    </head>
+    <body bgcolor="red">
+      <div class="five">
+        <input  class="four" type="button" value="Задание 1" onclick="first()"\></br>
+        <input  class="four" type="button" value="Задание 2" onclick="second()"\></br>
+        <input  class="four" type="button" value="Задание 3" onclick="third()"\></br>
+        <input  class="four" type="button" value="Задание 4" onclick="fourth()"\></br>
+        <input  class="four" type="button" value="Задание 5" onclick="fifth()"\></br>
+        <input  class="four" type="button" value="Задание 6" onclick="sixth()"\></br>
+        <input  class="four" type="button" value="Задание 7" onclick="seventh()"\></br>
+      </div> 
+    </body>
+</html>
