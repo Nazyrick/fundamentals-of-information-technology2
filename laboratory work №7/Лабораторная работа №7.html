@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Лабораторная работа №7</title>
+	</head>
+    <style>
+        .first{
+             font-family: 'Times New Roman', Times, serif;
+             font-size: large;
+             font-weight: bold;
+        }
+    </style>
+	<body>
+
+		<div>
+			<form>
+
+				<textarea name="info"  required="true" class="first">Факультет информационных технологий</textarea>
+				<div>
+                
+					<input type="text" autofocus="true" placeholder="Фамилия" required="true" name="surname">
+					<br>
+					<input type="text" placeholder="Имя" required="true" name="name">
+				</div>
+            </br>
+				<div>
+					<label>
+						<b class="first">Специальность</b>
+						<select name="specialties">
+							<option value="ИСиТ">ИСиТ</option>
+							<option value="ПОИТ">ПОИТ</option>
+							<option value="ПОИБМС">ПОИБМС</option>
+							<option value="ДЭВИ">ДЭВИ</option>
+						</select>
+					</label>
+				</div>
+            </br></br></br></br>
+				<div>
+					<label>
+						<div class="first">
+							<b>Курс</b>
+						</div>
+						<input type="radio" name="class" value="1" required="true" id="c1"><label for="c1">1</label>
+						<input type="radio" name="class" value="2" id="c2"><label for="c2">2</label>
+						<input type="radio" name="class" value="3">3
+						<input type="radio" name="class" value="4">4
+					</label>
+				</div>
+
+				<div>
+					<label>
+						<div class="first">
+							<b >Предметы</b>
+						</div>
+						<input type="checkbox" name="subjects" value="ОИТ">ОИТ
+						<input type="checkbox" name="subjects" value="ОАП">ОАП
+						<input type="checkbox" name="subjects" value="История">История
+						<input type="checkbox" name="subjects" value="Физика">Физика
+						<input type="checkbox" name="subjects" value="Математика">Математика
+					</label>
+				</div>
+				<input type="button" value='submit'><input type="button" value="reset"></br>
+				<input type="button" value="Напечатать" onclick="printSelected()">
+			</form>
+
+		</div>
+
+        <script type="text/javascript" >
+        function addElement(tag, content = '', parent = document.body) {
+	let el = document.createElement(tag);
+	el.innerHTML = content;
+	parent.append(el);
+	return el;
+}
+
+function printSelected() {
+	var selectedElements = new Array();
+	var ul;
+	selectedElements.push(document.forms[0].elements.specialties.value);
+	selectedElements.push(document.forms[0].elements.class.value);
+
+	addElement('p', document.forms[0].elements[0].value);
+	addElement('p', `Студент ${document.all.surname.value} ${document.all.name.value} специальность ${selectedElements[0]} курс ${selectedElements[1]} должен сдавать следующие предметы:`);
+
+	ul = addElement('ul');
+	for (let subject of document.all.subjects)
+		if (subject.checked) {
+			addElement('li', subject.value, ul)
+			selectedElements.push(subject.value);
+		}
+
+	let select = addElement('select', '', addElement('form'));
+	select.disabled = true;
+	select.size = selectedElements.length;
+	for (el of selectedElements) {
+		addElement('option', el, select);
+	}
+}
+        
+        </script>
+	</body>
+
+</html>
