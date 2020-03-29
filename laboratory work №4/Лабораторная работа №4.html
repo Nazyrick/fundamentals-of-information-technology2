@@ -1,0 +1,120 @@
+
+<html>
+<head>
+    <title>
+        Лабораторная работа №4
+    </title>
+    <script type="text/javascript">
+    document.write("<h1 align=center>" + "Задание№1" + "</h1>");
+    function Grupp(n,spec,kolvo){
+        this.n = n;
+        this.spec = spec;
+        this.kolvo = kolvo;
+        this.add_stud = function add_stud(a){
+            this.kolvo+=a;
+            document.write("В группу " + this.n + " добавили " + a + " студентов." + "</br>");
+        }
+        this.sub_stud = function sub_stud(b){
+            this.kolvo-= b;
+            document.write("Из группы " + this.n + " отчислено " + b + " студентов." + "</br>");
+            document.write("</br>");
+    }
+    document.write("</br>");
+    }
+    document.write("</br>");
+gr1 = new Grupp(4 , 'ПОИТ' , 25);
+gr1.add_stud(4);
+gr1.sub_stud(3);
+
+gr2 = new Grupp(7 , 'ИСИТ' , 28);
+gr2.add_stud(8);
+gr2.sub_stud(5);
+
+gr3 = new Grupp(10 , 'ЛХ' , 20);
+gr3.add_stud(1);
+gr3.sub_stud(0);
+
+gr4 = new Grupp(5 , 'УТУП' , 30);
+gr4.add_stud(6);
+gr4.sub_stud(10);
+document.write("В первой группе " + gr1.kolvo + " человек." + "</br>" + "</br>");
+document.write("Во второй группе " + gr2.kolvo + " человек." + "</br>" + "</br>");
+document.write("В третьей группе " + gr3.kolvo + " человек." + "</br>" + "</br>");
+document.write("В четвертой группе " + gr4.kolvo + " человек." + "</br>" + "</br>");
+
+document.write("<h1 align=center>" + "Задание№2" + "</h1>");
+function Student(name, surname, physics, mathmatics, it)
+{
+    this.name = name;
+    this.surname = surname;
+    this.physics = physics;
+    this.mathmatics = mathmatics;
+    this.it = it;
+    this.stud = function stud(n,sur,point){
+       prompt("Введите имя ");
+       prompt("Введите фамилию ");
+      alert("Ваша средняя оценка : " + point);
+  document.write("Имя студента : " + n + "</br>" + " Фамилия студента : " + sur + "</br>" + " Средня оценка : " + point + "</br>");
+document.write("</br>");
+ }
+ document.write("</br>");
+ document.write("</br>");
+}   
+st1 = new Student('Иван', 'Иванов', 6 , 7 , 8);
+st1.stud('Иван', 'Иванов', (6 + 7 + 8)/3);
+
+st2 = new Student('Петр', 'Петров', 3,7,9);
+st2.stud('Петр', 'Петров', (3+7+9)/3);
+
+st3 = new Student ('Сидор', 'Сидоров', 4,6,7 );
+st3.stud('Сидор', 'Сидоров', (4+6+7)/2);
+
+ Student.prototype.kurs = this.kurs;
+ st1.kurs = 1;
+st2.kurs = 4;
+st3.kurs = 2;
+document.write("Студент " + st1.name + ' '  +	st1.surname + " - ученик " + st1.kurs + " курса." + "</br>");
+document.write("Студент " + st2.name + ' '  +	st2.surname + " - ученик " + st2.kurs + " курса." + "</br>");
+document.write("Студент " + st3.name + ' '  +	st3.surname + " - ученик " + st3.kurs + " курса." + "</br>");
+
+
+document.write("<h1 align=center>" + "Задание№3" + "</h1>");
+var mass = new Array("pow", "pop", "push", "shift", "round", "floor", "sline", "sort");
+mystring = new String("Уласевич Назар Олегович");
+var x = new Date();
+document.write("Исходный массив : " + mass + "</br>");
+delete mass[2];
+document.write("Полученный массив : " + mass + "</br>");
+document.write("</br>");
+ document.write("</br>");
+ document.write( mass[2] in mass);
+ document.write("</br>");
+ document.write(  'name' in Student);
+ document.write("</br>");
+ document.write( 'point' in Student);
+ document.write("</br>");
+ document.write("</br>");
+ document.write(mass instanceof Array );
+ document.write("</br>");
+ document.write(mystring instanceof String );
+ document.write("</br>");
+document.write(x instanceof Object ) ;
+document.write("</br>");
+document.write("</br>");
+function ttt(){
+    var a = 5;
+    alert(a);
+}
+ ttt();
+document.write(typeof st1.kurs);
+document.write("</br>");
+document.write(typeof name);
+document.write("</br>");
+document.write(typeof ttt);
+document.write("</br>");
+document.write(typeof mass);
+document.write("</br>");
+document.write(typeof Student);
+ </script>
+</head>
+</html>
